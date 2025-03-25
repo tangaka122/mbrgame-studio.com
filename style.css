@@ -1,0 +1,193 @@
+/* Apply Material Design styling */
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #f5f5f5;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+/* Trade Form Styling */
+
+.trade-form {
+
+    width: 90%;
+
+    max-width: 500px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background-color: white;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.trade-form h2 {
+
+    font-size: 20px;
+
+    color: #333;
+
+    text-align: center;
+
+}
+
+/* Input Fields */
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+    color: #555;
+
+}
+
+input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 5px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    background-color: #f9f9f9;
+
+    transition: border-color 0.3s;
+
+}
+
+input:focus {
+
+    border-color: #6200ea;
+
+    outline: none;
+
+}
+
+/* Buttons */
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    background-color: #6200ea;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+}
+
+button:hover {
+
+    background-color: #3700b3;
+
+}
+
+/* Trades Panel */
+
+.trades-panel {
+
+    width: 90%;
+
+    max-width: 500px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background-color: white;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.trades-panel h2 {
+
+    font-size: 20px;
+
+    color: #333;
+
+    text-align: center;
+
+}
+
+/* Trade Item */
+
+.trade {
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    background-color: white;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    text-shadow: 1px 1px 2px black;
+
+    min-height: 150px; /* Ensures background is visible */
+
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    .trade-form, .trades-panel {
+
+        width: 95%;
+
+    }
+
+}

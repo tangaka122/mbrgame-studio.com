@@ -1,55 +1,16 @@
-.trade-form, .trades-panel {
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.trades-panel {
-    margin-top: 30px;
-}
-
 .trade {
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     background-color: white;
-}
-
-.trade img {
-    max-width: 100px;
-    display: block;
-    margin: 10px auto;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-input {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
-    padding: 8px;
-}
-
-button {
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #0056b3;
+    height: 150px;  /* Ensures the background is visible */
+    color: white;  /* Makes text readable */
+    text-shadow: 1px 1px 2px black; /* Improves text visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
 }

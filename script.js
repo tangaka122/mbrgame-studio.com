@@ -7,10 +7,13 @@ function loadTrades() {
     trades.forEach((trade, index) => {
         let tradeDiv = document.createElement("div");
         tradeDiv.classList.add("trade");
+        tradeDiv.style.backgroundImage = `url(${trade.image})`;
+        tradeDiv.style.backgroundSize = "cover";
+        tradeDiv.style.backgroundPosition = "center";
+        
         tradeDiv.innerHTML = `
             <p><strong>Item:</strong> ${trade.item}</p>
             <p><strong>Roblox Username:</strong> ${trade.username}</p>
-            <img src="${trade.image}" alt="Item Image">
             <button onclick="acceptTrade(${index})">Accept</button>
             <button onclick="rejectTrade(${index})">Reject</button>
         `;
@@ -22,17 +25,27 @@ function loadTrades() {
 function addTrade() {
     let item = document.getElementById("item-name").value.trim();
     let username = document.getElementById("roblox-username").value.trim();
-    let image = document.getElementById("item-image").value.trim();
+    let imageInput = document.getElementById("item-image").files[0];
 
-    if (item && username && image) {
-        let trades = JSON.parse(localStorage.getItem("trades")) || [];
-        trades.push({ item, username, image });
-        localStorage.setItem("trades", JSON.stringify(trades));
-        loadTrades();
-        alert("Trade Posted Successfully!");
+    if (item && username && imageInput) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            let image = e.target.result;
+            saveTrade(item, username, image);
+        };
+        reader.readAsDataURL(imageInput);
     } else {
-        alert("Please fill in all fields.");
+        alert("Please fill in all fields and upload an image.");
     }
+}
+
+// Save trade data
+function saveTrade(item, username, image) {
+    let trades = JSON.parse(localStorage.getItem("trades")) || [];
+    trades.push({ item, username, image });
+    localStorage.setItem("trades", JSON.stringify(trades));
+    loadTrades();
+    alert("Trade Posted Successfully!");
 }
 
 // Accept a trade

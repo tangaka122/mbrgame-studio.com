@@ -7,10 +7,13 @@ function loadTrades() {
     trades.forEach((trade, index) => {
         let tradeDiv = document.createElement("div");
         tradeDiv.classList.add("trade");
+        tradeDiv.style.backgroundImage = `url(${trade.image})`;
+        tradeDiv.style.backgroundSize = "cover";
+        tradeDiv.style.backgroundPosition = "center";
+        
         tradeDiv.innerHTML = `
             <p><strong>Item:</strong> ${trade.item}</p>
             <p><strong>Roblox Username:</strong> ${trade.username}</p>
-            <img src="${trade.image}" alt="Item Image">
             <button onclick="acceptTrade(${index})">Accept</button>
             <button onclick="rejectTrade(${index})">Reject</button>
         `;
